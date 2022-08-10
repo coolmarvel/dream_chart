@@ -5,6 +5,7 @@ export default class Bar extends React.Component {
     super(props);
 
     this.echarts = this.props.echarts;
+    console.log(this.props.echarts);
   }
 
   render() {

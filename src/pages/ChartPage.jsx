@@ -1,7 +1,8 @@
 import React from "react";
 import * as echarts from "echarts";
-import Bar from "../components/charts/Bar";
-import Line from "../components/charts/Line";
+// import Bar from "../components/charts/Bar";
+import BarFunc from "../components/charts/BarFunction";
+import LineFunc from "../components/charts/LineFunction";
 import Pie from "../components/charts/Pie";
 import Radar from "../components/charts/Radar";
 
@@ -23,9 +24,9 @@ export default function ChartPage() {
   const renderChart = (type) => {
     switch (type) {
       case "line":
-        return <Line echarts={echarts} />;
+        return <LineFunc echarts={echarts} />;
       case "bar":
-        return <Bar echarts={echarts} />;
+        return <BarFunc echarts={echarts} />;
       case "pie":
         return <Pie echarts={echarts} />;
       case "radar":
@@ -37,10 +38,10 @@ export default function ChartPage() {
 
   const getAllCharts = () => {
     const charts = [
+      { type: "bar", title: "Basic Bar" },
       { type: "line", title: "Tooltip & DataZoom" },
       { type: "radar", title: "Basic Radar" },
       { type: "pie", title: "Basic Pie" },
-      { type: "bar", title: "Basic Bar" },
     ];
 
     return charts.map((item, index) => {
