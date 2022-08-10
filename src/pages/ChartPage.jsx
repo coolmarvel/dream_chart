@@ -2,7 +2,8 @@ import React from "react";
 import * as echarts from "echarts";
 // import Bar from "../components/charts/Bar";
 import BarFunc from "../components/charts/BarFunction";
-import LineFunc from "../components/charts/LineFunction";
+// import LineFunc from "../components/charts/LineFunction";
+import Line from "../components/charts/Line";
 import Pie from "../components/charts/Pie";
 import Radar from "../components/charts/Radar";
 
@@ -24,7 +25,7 @@ export default function ChartPage() {
   const renderChart = (type) => {
     switch (type) {
       case "line":
-        return <LineFunc echarts={echarts} />;
+        return <Line echarts={echarts} />;
       case "bar":
         return <BarFunc echarts={echarts} />;
       case "pie":

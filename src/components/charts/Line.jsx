@@ -24,6 +24,9 @@ export default class Line extends React.Component {
     var data = [];
     var data2 = [];
 
+    console.log("data", data);
+    console.log("data2", data2);
+
     for (var i = 1; i < 10; i++) {
       var now = new Date((base += oneDay));
       var dayStr = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join(

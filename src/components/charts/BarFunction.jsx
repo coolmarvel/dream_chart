@@ -27,8 +27,6 @@ export default function BarFunction() {
     setLoading(false);
   }, [dashboard]);
 
-  console.log("data", data);
-
   const blocksArray = [];
 
   for (const data of dashboard) {
